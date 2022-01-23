@@ -1,0 +1,21 @@
+.contacts{
+    display: flex;
+    align-items: center;
+    
+}
+
+.contacts-container{
+    width: 100%; 
+    padding: 70px 0 30px 150px;
+    color: #250E67;
+}
+.contacts-container p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+.contacts-container p:first-child{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}

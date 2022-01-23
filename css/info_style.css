@@ -1,0 +1,269 @@
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container{
+    height: 320px;
+    width: 100%;
+}
+
+.info-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    height: 100%;
+}
+.info-button-container-hide{
+    animation: info_button_container_animate 1s;
+    opacity: 0;
+}
+.button-learn_more, .button-skills{
+     background-color: #F9BA0E;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     width: 150px;
+     height: 150px;
+}
+.button-learn_more a, .button-skills a{
+    text-align: center;
+    line-height: 150px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.info-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 320px;
+    background-color: #F6CADC;
+    margin-top: -320px;
+    margin-left: -100%;
+    opacity: 0;
+}
+.info-text-show{
+    animation: info_text_animate 1s;
+    margin-left: 0;
+    opacity: 1;
+}
+
+@keyframes info_text_animate {
+	0% {
+		margin-left: -100%;
+        opacity: 0;
+	}
+	100% {
+		margin-left: 0;
+        opacity: 1;
+	}
+}
+@keyframes info_button_container_animate {
+	0% {
+		margin-left: 0;
+        opacity: 1;
+	}
+	100% {
+		margin-left: 100%;
+        opacity: 0;
+	}
+}
+
+
+.info-text-container{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 60px 150px;
+}
+.info-text-container-column1{
+    display: flex;
+    flex-direction: row;
+}
+.info-text-city-age{
+    margin-right: 150px;
+    height: 100%;
+}
+.info-text-education{
+    margin-right: 250px;
+    height: 100%;
+}
+.info-text-city-age p, .info-text-education p{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+.info-text-city-age span, .info-text-education span{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.button-skills{
+    background-color: #8D5EEB;
+    position: relative;
+}
+.button-skills a{
+    text-transform: uppercase;
+}
+.button-arrow{
+    position: absolute;
+    bottom: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8D5EEB;
+    animation: button_arrow_animation 1.5s infinite;
+}
+@keyframes button_arrow_animation{
+    0%{
+        bottom: -20px;
+    }
+    100%{
+        bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .info-text-container{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .info-text{
+        height: 500px;
+    }
+    .info-text-container{
+        flex-direction: column;
+    }
+    .info-text-container-column1{
+        width: 80%;
+    }
+    .info-text-city-age, .info-text-education {
+        margin: 0;
+        width: 50%;
+        
+    }
+    .info-text-button_skills{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills-header{
+    padding: 60px 150px;
+}
+.skills-header_1{
+    font-size: 24px;
+    font-weight: 500;
+}
+.skills-header_2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.skills-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50%;
+    animation: spin linear 2s ;
+    animation-iteration-count: infinite;
+}
+.skill-div:nth-child(2n){
+    animation: spin linear 1s ;
+    animation-iteration-count: infinite;
+}
+@keyframes spin { 
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.skill-div-big{
+    min-width: 150px;
+    min-height: 150px;
+    background: radial-gradient(circle closest-side at 50% 50%, rgba(141, 94, 235, 1), rgba(141, 94, 235, 0));
+    font-size: 18px;
+    
+}
+.skill-div-little{
+    min-width: 97px;
+    min-height: 97px;
+    background: radial-gradient(circle closest-side at 50% 50%, rgba(249, 186, 14, 1), rgba(249, 186, 14, 0));
+    font-size: 14px;
+}
+.skill-div:nth-child(1){  
+    margin-top: -130px;
+}
+.skill-div:nth-child(2){
+    margin-left: -50px;    
+    margin-top: 350px;
+    margin-right: 50px;
+}
+.skill-div:nth-child(3){  
+    margin-top: 80px;
+}
+.skill-div:nth-child(4){
+    margin-left: -50px;    
+    margin-top: -250px;
+    margin-right: 50px;
+}
+.skill-div:nth-child(5){
+    margin-left: 30px;
+    margin-right: 50px;      
+}
+.skill-div:nth-child(6){
+    margin-left: -70px;    
+    margin-top: 320px;
+}
+.skill-div:nth-child(7){  
+    margin-top: -160px;
+    margin-right: 50px;
+}
+.skill-div:nth-child(8){  
+    margin-top: 80px;
+    margin-left: -50px;
+}
+.skill-div:nth-child(9){  
+    margin-top: 150px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+.skill-div:nth-child(10){
+    margin-left: -70px;    
+    margin-top: -200px;
+}
