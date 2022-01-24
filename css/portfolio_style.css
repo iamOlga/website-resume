@@ -1,0 +1,135 @@
+.portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    background-color: #F8F9CD;
+}
+
+.portfolio-container{
+    width: 100%; 
+    padding: 70px 150px;
+}
+
+
+.portfolio-header{
+    font-size: 30px;
+    font-weight: 700;
+    color: #381797;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.portfolio-links-container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.portfolio-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;  
+}
+.portfolio-link-cover{
+    width: 142px;
+    height: 181px;
+    background-color: #381797;
+    position: relative;
+    z-index: 1;
+}
+.portfolio-link-cover-on{
+    background-color: #FF4B6E;
+}
+
+.portfolio-link-cover p{
+    color: #F8F9CD;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.portfolio-link-lower{
+    width: 142px;
+    height: 181px;
+    background: none;
+    border: 2px solid #FF4B6E;
+    position: absolute;
+    z-index: -1;
+    margin-left: 0;
+    opacity: 0;
+}
+.portfolio-link-lower a{ 
+    display: block; 
+    color: #381797;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.portfolio-link-lower-on{
+    animation: link_lower_animate-on 0.5s linear;
+    margin-left: 282px;
+    z-index: 1;
+    opacity: 1;
+}
+
+@keyframes link_lower_animate-on {
+	0% {
+        margin-left: 0;
+        z-index: -1;
+        opacity: 0;
+	}
+	100% {
+        margin-left: 282px;
+        z-index: 1;
+        opacity: 1;
+	}
+}
+.portfolio-link-lower-off{
+    animation: link_lower_animate-off 1.5s linear;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+@keyframes link_lower_animate-off {
+	0% {
+        margin-left: 282px;
+        z-index: 1;
+        opacity: 1;
+	}
+    70% {
+        margin-left: 282px;
+        z-index: 1;
+        opacity: 1;
+	}
+	100% {
+        margin-left: 0;
+        z-index: -1;
+        opacity: 0;
+	}
+}
+
+
+@media screen and (max-width: 1200px){
+    .portfolio-container{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .portfolio-links-container{
+        flex-direction: column;
+    }
+    .portfolio-link{
+        margin: 10px 0;
+    }
+
+}
